@@ -43,6 +43,12 @@
             this.btnList = new System.Windows.Forms.Button();
             this.txtProductStock = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblTotalBook = new System.Windows.Forms.Label();
+            this.lblTotalProduct = new System.Windows.Forms.Label();
+            this.lblMaxProduct = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblCategoryCount = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,12 +184,81 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Stock:";
             // 
+            // lblTotalBook
+            // 
+            this.lblTotalBook.AutoSize = true;
+            this.lblTotalBook.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalBook.Location = new System.Drawing.Point(27, 317);
+            this.lblTotalBook.Name = "lblTotalBook";
+            this.lblTotalBook.Size = new System.Drawing.Size(177, 37);
+            this.lblTotalBook.TabIndex = 15;
+            this.lblTotalBook.Text = "Total Book:";
+            // 
+            // lblTotalProduct
+            // 
+            this.lblTotalProduct.AutoSize = true;
+            this.lblTotalProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(222)))), ((int)(((byte)(43)))));
+            this.lblTotalProduct.Location = new System.Drawing.Point(210, 317);
+            this.lblTotalProduct.Name = "lblTotalProduct";
+            this.lblTotalProduct.Size = new System.Drawing.Size(34, 37);
+            this.lblTotalProduct.TabIndex = 16;
+            this.lblTotalProduct.Text = "0";
+            // 
+            // lblMaxProduct
+            // 
+            this.lblMaxProduct.AutoSize = true;
+            this.lblMaxProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMaxProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(222)))), ((int)(((byte)(43)))));
+            this.lblMaxProduct.Location = new System.Drawing.Point(240, 354);
+            this.lblMaxProduct.Name = "lblMaxProduct";
+            this.lblMaxProduct.Size = new System.Drawing.Size(34, 37);
+            this.lblMaxProduct.TabIndex = 18;
+            this.lblMaxProduct.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(27, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(207, 37);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Priciest Book:";
+            // 
+            // lblCategoryCount
+            // 
+            this.lblCategoryCount.AutoSize = true;
+            this.lblCategoryCount.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCategoryCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(222)))), ((int)(((byte)(43)))));
+            this.lblCategoryCount.Location = new System.Drawing.Point(266, 391);
+            this.lblCategoryCount.Name = "lblCategoryCount";
+            this.lblCategoryCount.Size = new System.Drawing.Size(34, 37);
+            this.lblCategoryCount.TabIndex = 20;
+            this.lblCategoryCount.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(27, 391);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 37);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Total Category:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(185)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 497);
+            this.Controls.Add(this.lblCategoryCount);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblMaxProduct);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTotalProduct);
+            this.Controls.Add(this.lblTotalBook);
             this.Controls.Add(this.txtProductStock);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnList);
@@ -201,6 +276,7 @@
             this.Controls.Add(this.lblId);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,6 +300,12 @@
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.TextBox txtProductStock;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTotalBook;
+        private System.Windows.Forms.Label lblTotalProduct;
+        private System.Windows.Forms.Label lblMaxProduct;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCategoryCount;
+        private System.Windows.Forms.Label label7;
     }
 }
 

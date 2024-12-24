@@ -70,5 +70,30 @@ namespace CSharpEducation501
             await connection.ExecuteAsync(query, parameters);
             MessageBox.Show("Book Updated Successfully.");
         }
+
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            string query1 = "SELECT Count(*) FROM TblProduct";  
+            var count = await connection.QueryFirstOrDefaultAsync<int>(query1);
+            lblTotalProduct.Text = count.ToString();
+
+
+            string query2 = "SELECT ProductName FROM TblProduct Where" +
+                " ProductPrice = (Select Max(ProductPrice) From TblProduct)" ;
+            var maxPrice = await connection.QueryFirstOrDefaultAsync<string>(query2);
+            lblMaxProduct.Text = maxPrice.ToString();
+
+            string query3 = "SELECT Count(Distinct(ProductCategory)) From TblProduct;";
+            var categoryCount = await connection.QueryFirstOrDefaultAsync<int>(query3);
+            lblCategoryCount.Text = categoryCount.ToString();
+
+
+
+
+        }
+
+        //string query = "DELETE FROM TblProduct WHERE ProductId = @productId";
+        //var parameters = new DynamicParameters();
+        //parameters.Add("@productId", txtProductId.Text);
     }
 }
